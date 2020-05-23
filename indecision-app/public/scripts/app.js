@@ -42,39 +42,53 @@ var template = React.createElement(
     )
 );
 
-var user = {
-    name: 'Andrew',
-    age: 27,
-    location: 'Toronto'
+var count = 0;
+var addOne = function addOne() {
+    count++;
+    renderCounterApp();
 };
 
-function getLocation(location) {
-    if (location) {
-        return React.createElement(
-            "p",
-            null,
-            "Location: ",
-            location
-        );
-    }
-}
+var minusOne = function minusOne() {
+    count--;
+    renderCounterApp();
+};
 
-var template2 = React.createElement(
-    "div",
-    null,
-    React.createElement(
-        "h1",
-        null,
-        user.name ? user.name : 'Anonymous'
-    ),
-    user.age && user.age >= 18 && React.createElement(
-        "p",
-        null,
-        "Age: ",
-        user.age
-    ),
-    getLocation(user.location)
-);
+var reset = function reset() {
+    count = 0;
+    renderCounterApp();
+};
 
 var appRoot = document.getElementById("app");
-ReactDOM.render(template, appRoot);
+
+// Manual Data Binding
+var renderCounterApp = function renderCounterApp() {
+    var template2 = React.createElement(
+        "div",
+        null,
+        React.createElement(
+            "h1",
+            null,
+            "Count: ",
+            count
+        ),
+        React.createElement(
+            "button",
+            { onClick: addOne },
+            "addOne"
+        ),
+        React.createElement(
+            "button",
+            { onClick: minusOne },
+            "minusOne"
+        ),
+        React.createElement(
+            "button",
+            { onClick: reset },
+            "reset"
+        )
+    );
+
+    ReactDOM.render(template2, appRoot);
+};
+
+renderCounterApp();

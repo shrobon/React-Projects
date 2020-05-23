@@ -18,26 +18,37 @@ const template = (
 </div>
 );
 
-
-const user = {
-    name: 'Andrew',
-    age: 27,
-    location: 'Toronto'
+let count = 0;
+const addOne = () => {
+    count++;
+    renderCounterApp();
 }
 
-function getLocation(location) {
-    if(location) {
-        return <p>Location: {location}</p>;
-    }
+const minusOne = () => {
+    count--;
+    renderCounterApp();
 }
 
-const template2 = (
-    <div>
-        <h1>{user.name ? user.name : 'Anonymous'}</h1>
-        {(user.age && user.age >=18) && <p>Age: {user.age}</p>}
-        {getLocation(user.location)}
-    </div>
-)
+const reset = () => {
+    count = 0;
+    renderCounterApp();
+}
 
 const appRoot = document.getElementById("app");
-ReactDOM.render(template,appRoot);
+
+// Manual Data Binding
+const renderCounterApp = () => {
+    const template2 = (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick={(addOne)}>addOne</button>
+            <button onClick={(minusOne)}>minusOne</button>
+            <button onClick={(reset)}>reset</button>
+
+        </div>
+    )
+
+    ReactDOM.render(template2,appRoot);
+}
+
+renderCounterApp();

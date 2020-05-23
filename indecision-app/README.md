@@ -12,3 +12,6 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch &
 
 ### JSX
 - undefined / null and boolean are ignored by JSX
+
+### Reading material
+- DOM elements (All supported HTML attributes)

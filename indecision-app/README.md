@@ -15,3 +15,4 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch &
 
 ### Reading material
 - DOM elements (All supported HTML attributes)
+- React DOM events 

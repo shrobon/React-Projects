@@ -3,6 +3,7 @@
 - live-server
 - babel-cli
 - babel-preset-react
+- chrome react dev tools
 
 
 ### Babel Transpiling
@@ -16,11 +17,7 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch &
 ### Reading material
 - DOM elements (All supported HTML attributes)
 - React DOM events 
-- Stateless Functional Components
-  - We cannot use state inside these 
-  - Props can be passed in as a parameter
-  - These are faster than class based components
-  - 
+
 
 ### Notes 
 #### React Component State 
@@ -33,3 +30,8 @@ Step 4 - Component re-rendered using new state values
 Step 5 - Start again at Step 3
 
 Call to this.setState is asynchronous
+
+#### Stateless Functional Components
+- We cannot use state inside these 
+- Props can be passed in as a parameter
+- These are faster than class based components

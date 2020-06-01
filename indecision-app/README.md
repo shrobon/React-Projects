@@ -17,6 +17,7 @@ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch &
 ### Reading material
 - DOM elements (All supported HTML attributes)
 - React DOM events 
+- React component lifecycle methods
 
 
 ### Notes 
@@ -35,3 +36,14 @@ Call to this.setState is asynchronous
 - We cannot use state inside these 
 - Props can be passed in as a parameter
 - These are faster than class based components
+- There is no way to use lifecycle methods for stateless components.
+
+#### Local Storage
+- Data persists across page loads 
+- Only works with string data
+- JSON strings can be used to store objects (JSON.stringify / JSON.parse)
+
+#### Lifecycle Methods
+- only available to class based components
+- componentDidUpdate() - called either when state / props gets updated.
+- https://reactjs.org/docs/state-and-lifecycle.html

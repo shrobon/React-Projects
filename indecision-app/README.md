@@ -47,3 +47,10 @@ Call to this.setState is asynchronous
 - only available to class based components
 - componentDidUpdate() - called either when state / props gets updated.
 - https://reactjs.org/docs/state-and-lifecycle.html
+
+#### Webpack 
+- Asset Bundler
+- Better use 3rd party libraries
+- Better way to decompose and manage an application
+- Organizes your JS. You have a single bundle.js (dep+code)
+

@@ -4,6 +4,7 @@
 - babel-cli
 - babel-preset-react
 - chrome react dev tools
+- webpack
 
 
 ### Babel Transpiling
@@ -53,4 +54,11 @@ Call to this.setState is asynchronous
 - Better use 3rd party libraries
 - Better way to decompose and manage an application
 - Organizes your JS. You have a single bundle.js (dep+code)
+- Mention where the entrypoint is and the location of the final bundle file
 
+#### Concepts to brush up
+- let | const | var 
+- this binding
+- arrow functions
+- webpack
+- defaults exports and named exports

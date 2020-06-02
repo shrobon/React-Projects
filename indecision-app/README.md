@@ -1,11 +1,13 @@
-### Tools
+## React Notes
+### Tools / packages
 - yarn ( yarn install )
 - live-server
 - babel-cli
 - babel-preset-react
 - chrome react dev tools
 - webpack
-
+- validator
+- React + ReactDOM
 
 ### Babel Transpiling
 ```
@@ -56,6 +58,8 @@ Call to this.setState is asynchronous
 - Organizes your JS. You have a single bundle.js (dep+code)
 - Mention where the entrypoint is and the location of the final bundle file
 - Each file if it wants to.... can have 1 default export setup
+- if a dependency is installed but not used, then babel will not add it to the bundle. This is efficient and saves some space.
+- loader: lets you customize the behavior of webpack when its loads a certain file. Example:  whenever you come across a .js file, pass it through babel
 
 #### Concepts to brush up
 - let | const | var 

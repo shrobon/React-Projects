@@ -55,6 +55,7 @@ Call to this.setState is asynchronous
 - Better way to decompose and manage an application
 - Organizes your JS. You have a single bundle.js (dep+code)
 - Mention where the entrypoint is and the location of the final bundle file
+- Each file if it wants to.... can have 1 default export setup
 
 #### Concepts to brush up
 - let | const | var 
